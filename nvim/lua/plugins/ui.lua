@@ -135,4 +135,27 @@ return {
 	{
 		"nvim-telescope/telescope-symbols.nvim",
 	},
+
+	-- Better diagnostics/quickfix UI
+	{
+		"folke/trouble.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+		config = function()
+			require("trouble").setup({
+				icons = true,
+				fold_open = "v",
+				fold_closed = ">",
+				indent_lines = false,
+				severity = nil,
+				groupby = "severity",
+				height = 10,
+			})
+
+			vim.keymap.set("n", "<leader>xx", "<cmd>Trouble<cr>", { desc = "Toggle trouble list" })
+			vim.keymap.set("n", "<leader>xw", "<cmd>Trouble diagnostics<cr>", { desc = "Workspace diagnostics" })
+			vim.keymap.set("n", "<leader>xd", "<cmd>Trouble diagnostics filter.buf=0<cr>", { desc = "Document diagnostics" })
+			vim.keymap.set("n", "<leader>xq", "<cmd>Trouble quickfix<cr>", { desc = "Quickfix list" })
+			vim.keymap.set("n", "<leader>xl", "<cmd>Trouble loclist<cr>", { desc = "Location list" })
+		end,
+	},
 }

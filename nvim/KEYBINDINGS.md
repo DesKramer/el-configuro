@@ -34,6 +34,7 @@
 | `<leader>fb` | Find buffers |
 | `<leader>fh` | Find help |
 | `<leader>fk` | Find keymaps |
+| `<leader>f/` | Fuzzy find in current file |
 
 ## LSP (Language Server)
 | Key | Description |
@@ -53,6 +54,15 @@
 | `]d` | Next diagnostic |
 | `<leader>dl` | Show line diagnostics |
 | `<leader>dq` | Show diagnostics list |
+
+## Diagnostics (Trouble)
+| Key | Description |
+|-----|-------------|\
+| `<leader>xx` | Toggle trouble list |
+| `<leader>xw` | Workspace diagnostics |
+| `<leader>xd` | Document diagnostics |
+| `<leader>xq` | Quickfix list |
+| `<leader>xl` | Location list |
 
 ## LSP Saga
 | Key | Description |
@@ -198,6 +208,14 @@
 | `<leader>nh` | Clear search highlights |
 | `<leader>qq` | Quit all |
 | `<leader>mp` | Toggle markdown preview |
+
+## Terminal
+| Key | Description |
+|-----|---|
+| `<leader>tt` | Toggle floating terminal |
+| `<leader>ot` | Toggle floating terminal |
+| `<leader>oc` | Run CLI command |
+| `<leader>ol` | Re-run last CLI command |
 
 ## Tips
 
